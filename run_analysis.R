@@ -33,4 +33,4 @@ names(meanstddata) <- tolower(names(meanstddata)) ##makes all letters lowercase 
 summarizeddata <- meanstddata %>% group_by(subject,activity) %>% summarize_each(funs(mean))
 
 ## Writes to .txt file
-write.table(summarizeddata, "C:/Users/Administrator/Documents/Getting and Cleaning Data/Week 4/data/summarizeddata.txt", sep="\t")
+write.table(summarizeddata, "C:/Users/Administrator/Documents/Getting and Cleaning Data/Week 4/data/summarizeddata.txt", sep="\t", row.names = FALSE)
